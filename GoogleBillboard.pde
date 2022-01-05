@@ -1,14 +1,12 @@
-public final static String e = "2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274274663919320030599218174135966290435";  
-public void setup()  
-{            
-    //your code here 
-}  
-public void draw()  
-{   
-	//not needed for this assignment
-}  
-public boolean isPrime(double dNum)  
-{   
-    //your code here   
-    return true;  
-} 
+public void setup(){
+  double a = Math.exp(1);
+  String e = a + "";
+  for(int i = 2; i < e.length(); i++){
+    String easy = e.substring(0+i, 10+i);
+    double dig = Double.parseDouble(easy);
+    if(dig % i == 0){
+      System.out.println(dig);
+      break;
+    }
+  }
+}
